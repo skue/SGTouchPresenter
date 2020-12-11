@@ -159,7 +159,7 @@ static CGFloat touchRadius = 20;
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
     for ( UITouch *touch in touches ) {
-        CGPoint touchPosition = [touch locationInView:nil];
+        CGPoint touchPosition = [touch locationInView:overlayWindow];
         NSNumber *touchKey = [NSNumber numberWithUnsignedInteger:[touch hash]];
         CALayer *layer = [touchLayers objectForKey:touchKey];
         
